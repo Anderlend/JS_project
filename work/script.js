@@ -1,4 +1,5 @@
 "use strict";
+/* First program
 
 const numderOfFilms = +prompt("Сколько фильмов Вы посмотрели?", "");
 
@@ -20,3 +21,16 @@ const a = prompt("Один из просмотреных фильмов?", ""),
 
       console.log(personalMovieDB);
       
+*/
+
+const num = 50;
+( num == 50 ) ? console.log("OK!") : console.log("eRRoR");
+
+switch (num) {
+    case 49: 
+        console.log("NOO!");
+        break;
+    case 100:
+        console.log("NOO!");
+        break;
+};
