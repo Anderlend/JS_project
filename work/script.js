@@ -1,4 +1,91 @@
 "use strict";
+
+let numberOfFilms;
+
+function start() {
+    numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", "");
+
+    while (numberOfFilms == null || isNaN(numberOfFilms) || numberOfFilms == "") {
+        numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", "");
+    }
+}
+
+start();
+
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
+
+
+
+
+function rememberMyFilms() {
+    for (let i = 0; i < 2; i++) {
+        const a = prompt("Один из просмотреных фильмов?", ""),
+            b = prompt(" ОЦЕНКА?", );
+        if (a != null && b != null && a != "" && b != "" && a.length < 50) {
+            personalMovieDB.movies[a] = b;
+            console.log("Mission complite");
+
+        } else {
+            console.log("err");
+            i--;
+        }
+    }
+
+    rememberMyFilms();
+
+
+    function detectPersonalLevel(){
+        if (personalMovieDB.count < 10) {
+            console.log("Ви переглянули дуже мало фільмів");
+        } else if (10 < personalMovieDB.count < 30) {
+            console.log("ви переглянули достатню кількість фільмів");
+        } else if (personalMovieDB.count >= 50) {
+            console.log("Ви гуу перегляду фільмів");
+        } else {
+            console.log(",'''''''''''''''''''");
+        }
+    }
+    detectPersonalLevel();
+
+
+}
+
+function showMyDB (hidden){
+    if (!hidden){
+        console.log(personalMovieDB);
+    }
+}
+
+showMyDB(personalMovieDB.privat);
+
+function wrireYourGeners(){
+    for (let i = 1; i <= 3; i++){
+        personalMovieDB.genres[i-1] = prompt(`Напишите Ваш любимый жанр под номером: ${i}`);
+    }
+}
+
+wrireYourGeners();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 let num = 20;
 
@@ -41,11 +128,32 @@ logger();
 const calc = (a, b) => {return a + b};
 
 */
+
+/*
 const str = "test";
 console.log(str.toUpperCase());
 console.log(str.toLowerCase());
 console.log(str);
 
+const fruit = "Some fruit";
+
+console.log(fruit.indexOf("7"));
+
+const logg = " Hello World";
+
+console.log(logg.slice(7, 9));
+
+console.log(logg.substring(7, 9));
+
+console.log(logg.substr(7, 5));
+
+const num = 12.9;
+
+console.log(Math.round(num));
+
+const test = "12.2px";
+console.log(parseFloat(test));
+    */
 
 
 /*
