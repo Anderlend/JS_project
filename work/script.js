@@ -1,5 +1,54 @@
 "use strict";
+/*
+let num = 20;
 
+
+function showFirstMessage(text){
+    console.log(text);
+     num = 15;
+}
+
+
+
+console.log(num); 
+
+
+showFirstMessage("Hello world!");
+
+console.log(num); 
+
+
+function calc(a, b){
+    return (a + b);
+}
+
+console.log(calc(5, 88));
+
+function ret(){
+    let num = 50;
+    return num;
+}
+
+const anothreNum = ret();
+console.log(anothreNum);
+
+const logger  = function() {
+    console.log("fccfcfcfc");
+};
+
+logger();
+
+const calc = (a, b) => {return a + b};
+
+*/
+const str = "test";
+console.log(str.toUpperCase());
+console.log(str.toLowerCase());
+console.log(str);
+
+
+
+/*
 
 const numderOfFilms = +prompt("Сколько фильмов Вы посмотрели?", "");
 
@@ -39,7 +88,7 @@ const personalMovieDB = {
         
         
       }
-      
+      */
 
 
 /*
