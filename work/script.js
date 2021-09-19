@@ -1,5 +1,50 @@
-"use strict";
+ "use strict";
 
+ const arr = [1,8,3,4,5];
+
+ arr.sort(compareNum);
+function compareNum(a, b){
+    return a - b;
+}
+// arr[99] = 0;
+
+ console.log(arr.length);
+
+arr.forEach(function(item, i, arr) {
+    console.log(`${i}: ${item} внутри масиива ${arr}`);
+})
+
+ arr.pop();
+ arr.push(10);
+
+ console.log(arr);
+
+ for (let i = 0; i < arr.length; i++){
+     console.log(arr[i]);
+ }
+
+ for (let value of arr){
+     console.log(value);
+ }
+
+
+ const str = prompt ("", "");
+ const products = str.split(", ");
+ products.sort();
+ console.log(products.join("; "));
+
+
+
+
+
+
+
+
+
+
+
+
+ /*
 const options = {
     name: 'fffffffff',
     with: 1024,
@@ -43,7 +88,7 @@ console.log(counter);
 console.log(Object.keys(options).length);
 
 
-
+*/
 
 
 
