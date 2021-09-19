@@ -1,5 +1,85 @@
  "use strict";
 
+ const personalMovieDB = {
+    count: 0,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false,
+    start: function() {
+        personalMovieDB.count = +prompt("Сколько фильмов вы уже посмотрели?", "");
+   
+        while (personalMovieDB.count == null || isNaN(personalMovieDB.count) || personalMovieDB.count == "") {
+            personalMovieDB.count = +prompt("Сколько фильмов вы уже посмотрели?", "");
+        }
+    },
+    rememberMyFilms: function() {
+        for (let i = 0; i < 2; i++) {
+            const a = prompt("Один из просмотреных фильмов?", ""),
+                b = prompt(" ОЦЕНКА?", );
+            if (a != null && b != null && a != "" && b != "" && a.length < 50) {
+                personalMovieDB.movies[a] = b;
+                console.log("Mission complite");
+   
+            } else {
+                console.log("err");
+                i--;
+            }
+        }},
+    detectPersonalLevel: function() {
+            if (personalMovieDB.count < 10) {
+                console.log("Ви переглянули дуже мало фільмів");
+            } else if (10 < personalMovieDB.count < 30) {
+                console.log("ви переглянули достатню кількість фільмів");
+            } else if (personalMovieDB.count >= 50) {
+                console.log("Ви гуу перегляду фільмів");
+            } else {
+                console.log(",'''''''''''''''''''");
+            }
+        },
+        showMyDB: function(hidden) {
+            if (!hidden) {
+                console.log(personalMovieDB);
+            }
+        },
+        wrireYourGeners: function() {
+            for (let i = 1; i <= 3; i++) {
+                if (personalMovieDB.genres[i - 1] == "" || personalMovieDB.genres[i - 1] == null){
+                    
+                    continue;
+                } else{
+                    personalMovieDB.genres[i - 1] = prompt(`Напишите Ваш любимый жанр под номером: ${i}`);
+                }
+            }
+        },
+        toggleVisibleMyDB: function(){
+            if (personalMovieDB.privat){
+                personalMovieDB.privat = false;
+            }else{
+                personalMovieDB.privat = true;
+            }
+
+        }
+ }
+
+ personalMovieDB.start();
+ personalMovieDB.rememberMyFilms();
+ personalMovieDB.detectPersonalLevel();
+ personalMovieDB.toggleVisibleMyDB();
+ personalMovieDB.wrireYourGeners();
+ personalMovieDB.showMyDB();
+
+ 
+
+ 
+
+ 
+
+
+
+
+
+ /*
 //OOP
 
 console.dir([1, 2, 5]);
@@ -27,7 +107,7 @@ console.log(human.health);
 
 
 
-
+*/
 
 
 
