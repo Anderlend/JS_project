@@ -1,6 +1,39 @@
  "use strict";
 
+//OOP
 
+console.dir([1, 2, 5]);
+
+const soilder = {
+    health: 555,
+    armor: 122,
+    sayHello: function  (){
+        console.log("Hello");
+    }
+};
+
+const john = {
+    health: 200
+};
+
+Object.setPrototypeOf(john, soilder);
+
+john.sayHello();
+
+
+const human = Object.create(soilder);
+
+console.log(human.health);
+
+
+
+
+
+
+
+
+
+/*
 let a = 5,
     b = a;
 
@@ -90,6 +123,8 @@ const q = {
 const newQ = {...q};
 
 console.log(newQ);
+
+*/
 
 
 
